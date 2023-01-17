@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load bootstrap5 %}
+
+    {% bootstrap_css %}
+
+    {% bootstrap_javascript %}
+
+    {% bootstrap_messages %}
+
+    <title>Evaluate movies</title>
+</head>
+<body>
+    {% block content %}
+    {%include 'website/navbar.html'%}
+    </br>
+    {% for movie in evaluation_list%}
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{movie.title}}</h5>
+                  <p class="card-text">Match: {{movie.score}}%</p>
+                  <ul>
+                    <li>Year difference: {{movie.year}} yrs</li>
+                    <li>Duration difference: {{movie.length}} min</li>
+                    <li>Genre match: {{movie.geners}}</li>
+                    <li>Director match: {{movie.director}}</li>
+                    <li>Language match: {{movie.language}}</li>
+                    <li>Star match: {{movie.star}}</li>
+                    <li>IMDB Rating difference: {{movie.rating}}</li>
+                    <li>Based on a true story match: {{movie.true_story}}</li>
+                    <li>Part of a franchise match: {{movie.franchise}}</li>
+                    <li>Hollywood movie match: {{movie.hollywood}}</li>
+                    <li>Considered cult match: {{movie.cult}}</li>
+                </ul>
+                </div>
+              </div>
+            {% endfor %}
+    {% endblock content %}
+</body>
+</html>

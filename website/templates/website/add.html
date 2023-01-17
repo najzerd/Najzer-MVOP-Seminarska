@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load bootstrap5 %}
+
+    {% bootstrap_css %}
+
+    {% bootstrap_javascript %}
+
+    {% bootstrap_messages %}
+
+    <title>Add Movies</title>
+</head>
+<body>
+    {% block content %}
+    {%include 'website/navbar.html'%}
+</br>
+    <center>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Submit" class="btn btn-success">
+        </form>
+    </center>
+    
+    {% endblock content %}
+</body>
+</html>
