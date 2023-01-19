@@ -1,0 +1,5 @@
+# Najzer-MVOP-Seminarska
+
+Predmet odločanja je izbira filma na podlagi parametrov podanih iz strani uporabnika. Uporabnik izdela seznam filmov (ang. watchlist), ki si jih želi ogledati. Ko si želi izbrati film iz seznama, lahko ima številne preference glede izbire. Morda je časovno omejen in ne želi da bi film bistveno presegal količino prostega časa ki ga ima na razpolago, mogoče si želi ogledati film specifičnega žanra, določenega režiserja ali pa s svojim najljubšim igralcem v glavni vlogi. Na podlagi uporabniških preferenc, se uporabniku filmi izpišejo po vrsti, na podlagi ujemanja z željenimi parametri. Pri temu vsekakor ne bi bilo smiselno, da od uporabnika pričakujemo vnose za vse parametre. Uporabnik lahko poljubno izbira po katerih parametrih želi poiskati filme, odločitveni model pa mu poda nabor na podlagi vnesenih parametrov.
+
+Specifike primerjave sem spisal v jeziku Python, pri vsaki evalvaciji pa sem na podlagi ujemanja atributov generiral procent ujemanj: od 0-100%. Dolžina in jezik filma vsak prispevata 20%, leto izida in IMDB ocena prispevata vsaka po 10%, ostali atributi pa vsak prispeva po 5% k celotnemu procentu ujemanj.
