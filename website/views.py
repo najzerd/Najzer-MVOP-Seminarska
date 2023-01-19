@@ -5,7 +5,7 @@ from .models import Movie
 from website.form import AddMovieForm
 from website.form import RecommendMovieForm
 from website.models import Movie
-# from website.dex import DEXModel
+from website.dex import DEXModel
 
 # Create your views here.
 def index(request):
